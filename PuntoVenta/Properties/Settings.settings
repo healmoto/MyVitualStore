@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PuntoVenta.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="UsuarioConectar" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Hector</Value>
+    </Setting>
+    <Setting Name="ContrasenaConectar" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter*-01</Value>
+    </Setting>
+    <Setting Name="ListaProductos" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PRODUCTOS</Value>
+    </Setting>
+    <Setting Name="MensajeCompras" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Por favor diligencie todos los datos</Value>
+    </Setting>
+    <Setting Name="ComboTexto" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Nombre</Value>
+    </Setting>
+    <Setting Name="ComboValor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Consecutivo</Value>
+    </Setting>
+    <Setting Name="MensajeEliminacion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Esta seguro(a) de que quiere eliminar el registro?</Value>
+    </Setting>
+    <Setting Name="Aplicativo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Punto de Venta</Value>
+    </Setting>
+    <Setting Name="ListaProveedores" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Proveedores</Value>
+    </Setting>
+    <Setting Name="Files" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\PuntoVenta</Value>
+    </Setting>
+    <Setting Name="Impresora" Type="System.String" Scope="User">
+      <Value Profile="(Default)">EPSON TM-T20II Receipt</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

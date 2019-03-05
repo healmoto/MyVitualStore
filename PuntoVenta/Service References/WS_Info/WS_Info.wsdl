@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ConsultarProductos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_token" type="tns:UsuarioVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UsuarioVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contraseña" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Equipo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultarProductosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarProductosResult" type="tns:ArrayOfProductoVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfProductoVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProductoVO" nillable="true" type="tns:ProductoVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProductoVO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Consecutivo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Referencia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferenciaAnterior" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="estado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tipo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Imagen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImagenDerecha" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Precio_Venta" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Costo" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoBarras" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalUnitario" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Promocion" type="s:short" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultarProveedores">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_token" type="tns:UsuarioVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarProveedoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarProveedoresResult" type="tns:ArrayOfProveedorVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfProveedorVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProveedorVO" nillable="true" type="tns:ProveedorVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProveedorVO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Consecutivo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nit" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Correo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CompraNueva">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_token" type="tns:UsuarioVO" />
+            <s:element minOccurs="0" maxOccurs="1" name="_compra" type="tns:Compra" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Compra">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Proveedor" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="factura" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Productos" type="tns:ArrayOfProductoVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CompraNuevaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CompraNuevaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VentaNueva">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_token" type="tns:UsuarioVO" />
+            <s:element minOccurs="0" maxOccurs="1" name="_venta" type="tns:VentaVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VentaVO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Numero_venta" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreCliente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ciudad" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Barrio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comentarios" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Envio" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="Pago" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescripcionEnvio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescripcionPago" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Tarjeta" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="Productos" type="tns:ArrayOfProductoVO" />
+          <s:element minOccurs="1" maxOccurs="1" name="PuntoVenta" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalVenta" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Archivo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="VentaNuevaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VentaNuevaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarVentas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="_fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="_tarjeta" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="_web" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarVentasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarVentasResult" type="tns:ArrayOfConsultaVentaVO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfConsultaVentaVO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ConsultaVentaVO" nillable="true" type="tns:ConsultaVentaVO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ConsultaVentaVO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Numero_Venta" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Numero_Detalle" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cliente" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ciudad" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Barrio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comentarios" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Envio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pago" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Producto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cantidad" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Precio" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Total" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Archivo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ConsultarProductosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarProductos" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarProductosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarProductosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarProveedoresSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarProveedores" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarProveedoresSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarProveedoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="CompraNuevaSoapIn">
+    <wsdl:part name="parameters" element="tns:CompraNueva" />
+  </wsdl:message>
+  <wsdl:message name="CompraNuevaSoapOut">
+    <wsdl:part name="parameters" element="tns:CompraNuevaResponse" />
+  </wsdl:message>
+  <wsdl:message name="VentaNuevaSoapIn">
+    <wsdl:part name="parameters" element="tns:VentaNueva" />
+  </wsdl:message>
+  <wsdl:message name="VentaNuevaSoapOut">
+    <wsdl:part name="parameters" element="tns:VentaNuevaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarVentasSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarVentas" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarVentasSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarVentasResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS_InfoSoap">
+    <wsdl:operation name="ConsultarProductos">
+      <wsdl:input message="tns:ConsultarProductosSoapIn" />
+      <wsdl:output message="tns:ConsultarProductosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProveedores">
+      <wsdl:input message="tns:ConsultarProveedoresSoapIn" />
+      <wsdl:output message="tns:ConsultarProveedoresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CompraNueva">
+      <wsdl:input message="tns:CompraNuevaSoapIn" />
+      <wsdl:output message="tns:CompraNuevaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VentaNueva">
+      <wsdl:input message="tns:VentaNuevaSoapIn" />
+      <wsdl:output message="tns:VentaNuevaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarVentas">
+      <wsdl:input message="tns:ConsultarVentasSoapIn" />
+      <wsdl:output message="tns:ConsultarVentasSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_InfoSoap" type="tns:WS_InfoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultarProductos">
+      <soap:operation soapAction="http://tempuri.org/ConsultarProductos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProveedores">
+      <soap:operation soapAction="http://tempuri.org/ConsultarProveedores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompraNueva">
+      <soap:operation soapAction="http://tempuri.org/CompraNueva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VentaNueva">
+      <soap:operation soapAction="http://tempuri.org/VentaNueva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarVentas">
+      <soap:operation soapAction="http://tempuri.org/ConsultarVentas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_InfoSoap12" type="tns:WS_InfoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultarProductos">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarProductos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProveedores">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarProveedores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompraNueva">
+      <soap12:operation soapAction="http://tempuri.org/CompraNueva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VentaNueva">
+      <soap12:operation soapAction="http://tempuri.org/VentaNueva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarVentas">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarVentas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_Info">
+    <wsdl:port name="WS_InfoSoap" binding="tns:WS_InfoSoap">
+      <soap:address location="http://hm:8081/WS_Info.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_InfoSoap12" binding="tns:WS_InfoSoap12">
+      <soap12:address location="http://hm:8081/WS_Info.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
