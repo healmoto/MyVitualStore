@@ -1,0 +1,11 @@
+D:\Trabajo\JobSity\SLN_JobSity\Entities\Entities\bin\Debug\Entities.dll.config
+D:\Trabajo\JobSity\SLN_JobSity\Entities\Entities\bin\Debug\Entities.dll
+D:\Trabajo\JobSity\SLN_JobSity\Entities\Entities\bin\Debug\Entities.pdb
+D:\Trabajo\JobSity\SLN_JobSity\Entities\Entities\obj\Debug\Entities.dll
+D:\Trabajo\JobSity\SLN_JobSity\Entities\Entities\obj\Debug\Entities.pdb
+D:\Desarrollo\Branches\MyVitualStore\JobSity\SLN_JobSity\Entities\Entities\bin\Debug\Entities.dll.config
+D:\Desarrollo\Branches\MyVitualStore\JobSity\SLN_JobSity\Entities\Entities\bin\Debug\Entities.dll
+D:\Desarrollo\Branches\MyVitualStore\JobSity\SLN_JobSity\Entities\Entities\bin\Debug\Entities.pdb
+D:\Desarrollo\Branches\MyVitualStore\JobSity\SLN_JobSity\Entities\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+D:\Desarrollo\Branches\MyVitualStore\JobSity\SLN_JobSity\Entities\Entities\obj\Debug\Entities.dll
+D:\Desarrollo\Branches\MyVitualStore\JobSity\SLN_JobSity\Entities\Entities\obj\Debug\Entities.pdb

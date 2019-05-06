@@ -1,0 +1,11 @@
+D:\Trabajo\JobSity\SLN_JobSity\Bot\bin\Debug\Bot.dll
+D:\Trabajo\JobSity\SLN_JobSity\Bot\bin\Debug\Bot.pdb
+D:\Trabajo\JobSity\SLN_JobSity\Bot\obj\Debug\Bot.dll
+D:\Trabajo\JobSity\SLN_JobSity\Bot\obj\Debug\Bot.pdb
+D:\Trabajo\JobSity\SLN_JobSity\Bot\bin\Debug\Bot.dll.config
+D:\Desarrollo\Branches\MyVitualStore\JobSity\SLN_JobSity\Bot\bin\Debug\Bot.dll.config
+D:\Desarrollo\Branches\MyVitualStore\JobSity\SLN_JobSity\Bot\bin\Debug\Bot.dll
+D:\Desarrollo\Branches\MyVitualStore\JobSity\SLN_JobSity\Bot\bin\Debug\Bot.pdb
+D:\Desarrollo\Branches\MyVitualStore\JobSity\SLN_JobSity\Bot\obj\Debug\Bot.csprojResolveAssemblyReference.cache
+D:\Desarrollo\Branches\MyVitualStore\JobSity\SLN_JobSity\Bot\obj\Debug\Bot.dll
+D:\Desarrollo\Branches\MyVitualStore\JobSity\SLN_JobSity\Bot\obj\Debug\Bot.pdb
